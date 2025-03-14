@@ -16,8 +16,8 @@ export const CarrinhoProvider = ({ children }) => {
     localStorage.setItem('carrinho', JSON.stringify(carrinhoAtualizado))
   }
 
-  const removerDoCarrinho = (id) => {
-    const carrinhoAtualizado = carrinho.filter(item => item.id !== id)
+  const removerDoCarrinho = (name) => {
+    const carrinhoAtualizado = carrinho.filter(item => item.name !== name)
     setCarrinho(carrinhoAtualizado)
 
     localStorage.setItem('carrinho', JSON.stringify(carrinhoAtualizado))

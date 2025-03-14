@@ -8,6 +8,7 @@ import Contact from './pages/contact'
 import { CarrinhoProvider } from './Contex'
 import Superiores from './pages/store/superiores'
 import Inferiores from './pages/store/inferiores'
+import Pay from './pages/pay'
 
 const Rotas = () => {
   return (
@@ -20,6 +21,7 @@ const Rotas = () => {
           <Route element={<Catalog />} path="/catalogo" />
           <Route element={<About />} path="/sobre" />
           <Route element={<Contact />} path="/contato" />
+          <Route element={<Pay />} path='/pagamento'/>
         </Routes>
       </BrowserRouter>
     </CarrinhoProvider>

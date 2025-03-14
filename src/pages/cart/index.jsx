@@ -15,9 +15,8 @@ const Carrinho = () => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
-  const removedorDeItem = (id) => {
-    console.log(id)
-    // removerDoCarrinho(id)
+  const removedorDeItem = (name) => {
+    removerDoCarrinho(name)
   }
 
   const calculoTotalCarrinho = () => {
@@ -47,7 +46,7 @@ const Carrinho = () => {
               carrinho.map((item) => (
                 <Card style={{ marginBottom: 10 }}>
                   <CloseButton style={{ margin: 10, position: 'absolute', right: 0 }} 
-                    onClick={() => removedorDeItem(item)}
+                    onClick={() => removedorDeItem(item.name)}
                   />
                   <Card.Img variant="top" src={item.url} />
                   <Card.Body>
@@ -69,7 +68,7 @@ const Carrinho = () => {
             }
           </p>
           <hr />
-          <Button variant="dark">Finalizar Compra</Button>
+          <Button variant="dark" href='/pagamento'>Finalizar Compra</Button>
         </Offcanvas.Body>
       </Offcanvas>
     </>
