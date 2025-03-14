@@ -5,19 +5,24 @@ import Store from './pages/store'
 import Catalog from './pages/catalog'
 import About from './pages/about'
 import Contact from './pages/contact'
-import Carrinho from './pages/cart'
+import { CarrinhoProvider } from './Contex'
+import Superiores from './pages/store/superiores'
+import Inferiores from './pages/store/inferiores'
 
 const Rotas = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Store />} path="/" exact />
-        <Route element={<Catalog />} path="/catalogo" exact />
-        <Route element={<About />} path="/sobre" exact />
-        <Route element={<Contact />} path="/contato" exact />
-        <Route element={<Carrinho />} path="/carrinho" exact />
-      </Routes>
-    </BrowserRouter>
+    <CarrinhoProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Store />} path="/" />
+          <Route element={<Superiores />} path="/superiores" />
+          <Route element={<Inferiores />} path="/inferiores" />
+          <Route element={<Catalog />} path="/catalogo" />
+          <Route element={<About />} path="/sobre" />
+          <Route element={<Contact />} path="/contato" />
+        </Routes>
+      </BrowserRouter>
+    </CarrinhoProvider>
   )
 }
 

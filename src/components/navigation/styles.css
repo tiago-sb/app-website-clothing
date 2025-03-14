@@ -1,0 +1,15 @@
+.notifications {
+  position: relative;
+}
+
+.notification {
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 10pt;
+  width: 15px;
+  text-align: center;
+  font-weight: bold;
+}

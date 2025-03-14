@@ -1,10 +1,11 @@
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-
-import { PiShoppingCart } from 'react-icons/pi'
+import Carrinho from '../../pages/cart'
+import './styles.css'
 
 const Navigation = () => {
+
   return (
     <Navbar collapseOnSelect expand="lg" style={{ fontFamily: 'Poppins', background: 'none' }}>
       <Container>
@@ -16,10 +17,10 @@ const Navigation = () => {
             <Nav.Link href="/sobre">Sobre</Nav.Link>
             <Nav.Link href="/contato">Contato</Nav.Link>
           </Nav>
+          <Navbar.Brand className='notifications'>
+            <Carrinho />
+          </Navbar.Brand>
         </Navbar.Collapse>
-        <Navbar.Brand href="/carrinho">
-          <PiShoppingCart />
-        </Navbar.Brand>
       </Container>
     </Navbar>
   )
